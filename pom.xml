@@ -28,6 +28,12 @@
                 <role>small modifications on this fork</role>
             </roles>
         </developer>
+        <developer>
+            <name>Masaki Muranaka</name>
+            <roles>
+                <role>small modifications on this fork</role>
+            </roles>
+        </developer>
     </developers>
     <licenses>
         <license>
