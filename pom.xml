@@ -7,7 +7,7 @@
     <name>Amazon S3/Google Developer Storage Maven Wagon Support</name>
     <version>3.3-SNAPSHOT</version>
     <description>Standard Maven wagon support for s3:// urls (forked from the Spring version)</description>
-    <url>https://github.com/elek/s3-maven-wagon/admin</url>
+    <url>https://github.com/PizzaFactory/s3-maven-wagon/admin</url>
     <inceptionYear>2007</inceptionYear>
     <parent>
         <groupId>org.sonatype.oss</groupId>
@@ -37,9 +37,9 @@
         </license>
     </licenses>
     <scm>
-        <connection>scm:git:git@github.com:elek/s3-maven-wagon.git</connection>
-        <url>scm:git:git@github.com:elek/s3-maven-wagon.git</url>
-        <developerConnection>scm:git:git@github.com:elek/s3-maven-wagon.git</developerConnection>
+        <connection>scm:git:git@github.com:PizzaFactory/s3-maven-wagon.git</connection>
+        <url>scm:git:git@github.com:PizzaFactory/s3-maven-wagon.git</url>
+        <developerConnection>scm:git:git@github.com:PizzaFactory/s3-maven-wagon.git</developerConnection>
     </scm>
     <build>
         <extensions>
