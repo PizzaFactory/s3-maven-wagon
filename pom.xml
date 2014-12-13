@@ -7,7 +7,7 @@
     <name>Amazon S3/Google Cloud Storage Maven Wagon Support</name>
     <version>3.3-SNAPSHOT</version>
     <description>Standard Maven wagon support for s3:// urls (forked from the Spring version)</description>
-    <url>https://github.com/PizzaFactory/s3-maven-wagon/admin</url>
+    <url>http://s3-maven-wagon.pizzafactory.jp/</url>
     <inceptionYear>2007</inceptionYear>
     <parent>
         <groupId>org.sonatype.oss</groupId>
