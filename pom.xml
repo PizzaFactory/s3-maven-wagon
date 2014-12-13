@@ -64,7 +64,22 @@
                     <target>1.5</target>
                 </configuration>
             </plugin>
-            
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.10</version>
+                <configuration>
+                    <message>Creating site for ${project.version}</message>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>site</phase>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
     <profiles>
@@ -108,5 +123,8 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-  
+
+    <properties>
+        <github.global.server>github</github.global.server>
+    </properties>
 </project>
