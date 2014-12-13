@@ -4,7 +4,7 @@
     <groupId>jp.pizzafactory.maven</groupId>
     <artifactId>s3-maven-wagon</artifactId>
     <packaging>jar</packaging>
-    <name>Amazon S3/Google Developer Storage Maven Wagon Support</name>
+    <name>Amazon S3/Google Cloud Storage Maven Wagon Support</name>
     <version>3.3-SNAPSHOT</version>
     <description>Standard Maven wagon support for s3:// urls (forked from the Spring version)</description>
     <url>https://github.com/PizzaFactory/s3-maven-wagon/admin</url>
