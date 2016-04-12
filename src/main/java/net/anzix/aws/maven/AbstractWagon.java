@@ -31,6 +31,7 @@ import org.apache.maven.wagon.repository.Repository;
 import org.apache.maven.wagon.resource.Resource;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -256,10 +257,34 @@ public abstract class AbstractWagon implements Wagon {
         }
     }
 
+    private List<String> getLocalFiles(final File baseDir, String prefix) {
+    	assert baseDir.isDirectory();
+	if (prefix.length() != 0) {
+            prefix += "/";
+        }
+    	List<String> result = new ArrayList<String>();
+    	for (File f : baseDir.listFiles()) {
+            if (f.isDirectory()) {
+                if (!f.getName().equals(".") && !f.getName().equals("..")) {
+                     List<String> files = getLocalFiles(f, prefix + f.getName());
+                     result.addAll(files);
+                }
+            } else {
+                result.add(prefix + f.getName());
+            }
+    	}
+    	return result;
+    }
+
     public final void putDirectory(File sourceDirectory, String destinationDirectory) throws TransferFailedException,
             ResourceDoesNotExistException, AuthorizationException {
-        for (File f : sourceDirectory.listFiles()) {
-            put(f, destinationDirectory + "/" + f.getName());
+    	if (!sourceDirectory.isDirectory()) {
+            throw new TransferFailedException("Source directory not found: " + sourceDirectory.getAbsolutePath());
+    	}
+    	List<String> files = getLocalFiles(sourceDirectory, "");
+        for (String path : files) {
+            File f = new File(sourceDirectory, path);
+            put(f, destinationDirectory + "/" + path);
         }
     }
 
