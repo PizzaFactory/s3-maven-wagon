@@ -63,7 +63,7 @@ public class SimpleStorageServiceWagon extends AbstractWagon {
     private String basedir;
 
     public SimpleStorageServiceWagon() {
-        super(false);
+        super(true);
     }
 
     protected void connectToRepository(Repository source, AuthenticationInfo authenticationInfo, ProxyInfoProvider proxyInfoProvider)
