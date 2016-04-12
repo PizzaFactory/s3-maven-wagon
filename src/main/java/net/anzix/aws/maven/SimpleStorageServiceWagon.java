@@ -170,7 +170,10 @@ public class SimpleStorageServiceWagon extends AbstractWagon {
 
     protected void putResource(File source, String destination, TransferProgress progress) throws ServiceException,
             IOException {
+		    System.err.println("======" + destination);
         buildDestinationPath(getDestinationPath(destination));
+		    System.err.println("======" + destination);
+		    System.err.println("------" + basedir);
         StorageObject object = new StorageObject(basedir + destination);
         object.setAcl(AccessControlList.REST_CANNED_PUBLIC_READ);
         object.setDataInputFile(source);
