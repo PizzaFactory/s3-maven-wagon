@@ -191,7 +191,7 @@ public abstract class AbstractWagon implements Wagon {
         }
     }
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     public final List getFileList(String destinationDirectory) throws TransferFailedException,
             ResourceDoesNotExistException, AuthorizationException {
         try {
