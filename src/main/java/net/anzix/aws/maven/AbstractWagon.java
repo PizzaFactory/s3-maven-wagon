@@ -284,6 +284,7 @@ public abstract class AbstractWagon implements Wagon {
     	List<String> files = getLocalFiles(sourceDirectory, "");
         for (String path : files) {
             File f = new File(sourceDirectory, path);
+	    if (!f.exists()) throw new TransferFailedException(f.getAbsolutePath());
             put(f, destinationDirectory + "/" + path);
         }
     }
